@@ -23,6 +23,6 @@ ActiveRecord::Schema.define do
 end
 
 class User < ActiveRecord::Base
-  soft_delete
-  soft_delete column_name: :discarded_at
+  soft_deletable
+  soft_deletable column_name: :discarded_at
 end
