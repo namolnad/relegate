@@ -17,12 +17,12 @@ ActiveRecord::Base.establish_connection adapter: "sqlite3", database: ":memory:"
 
 ActiveRecord::Schema.define do
   create_table :users do |t|
-    t.datetime :archived_at
+    t.datetime :deleted_at
     t.datetime :discarded_at
   end
 end
 
 class User < ActiveRecord::Base
-  castoff
-  castoff column_name: :discarded_at
+  soft_delete
+  soft_delete column_name: :discarded_at
 end

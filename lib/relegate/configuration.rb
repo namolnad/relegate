@@ -6,7 +6,7 @@ module Relegate
     attr_writer :marked_scope_name, :unmarked_scope_name, :mark_method_name, :unmark_method_name
 
     def initialize
-      @column_name = :archived_at
+      @column_name = :deleted_at
     end
 
     def marked_scope_name

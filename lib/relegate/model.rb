@@ -7,7 +7,7 @@ module Relegate
     extend ActiveSupport::Concern
 
     class_methods do # rubocop:disable Metrics/BlockLength
-      def castoff(column_name: nil) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
+      def soft_delete(column_name: nil) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
         config = Relegate.configuration.dup.tap do |c|
           c.column_name = column_name if column_name
         end

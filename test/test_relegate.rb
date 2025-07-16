@@ -9,35 +9,35 @@ class TestRelegate < Minitest::Test
 
   def test_accessor_methods
     user = User.new
-    assert_equal false, user.archived?
+    assert_equal false, user.deleted?
     assert_equal false, user.discarded?
-    user.archived_at = Time.current
-    assert_equal true, user.archived?
+    user.deleted_at = Time.current
+    assert_equal true, user.deleted?
     assert_equal false, user.discarded?
   end
 
   def test_scopes
     User.create!(discarded_at: Time.current)
     assert_equal 1, User.discarded.count
-    assert_equal 0, User.archived.count
+    assert_equal 0, User.deleted.count
   end
 
   def test_state_change_methods
     user = User.create!
-    assert !user.archived?
-    user.archive!
-    assert user.archived?
+    assert !user.deleted?
+    user.delete!
+    assert user.deleted?
     user.reload
-    assert user.archived?
-    user.unarchive!
-    assert user.unarchived?
+    assert user.deleted?
+    user.undelete!
+    assert user.undeleted?
     user.reload
-    assert user.unarchived?
+    assert user.undeleted?
   end
 
   def test_negative_scopes
-    User.create!(archived_at: Time.current)
-    assert_equal 0, User.unarchived.count
+    User.create!(deleted_at: Time.current)
+    assert_equal 0, User.undeleted.count
     assert_equal 1, User.undiscarded.count
   end
 end
