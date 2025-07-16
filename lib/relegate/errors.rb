@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module Castoff
-  class CastoffError < StandardError
+module Relegate
+  class RelegateError < StandardError
   end
 
-  # Raised by {Castoff::Model#archive!}
-  class RecordNotArchived < CastoffError
+  # Raised by {Relegate::Model#archive!}
+  class RecordNotArchived < RelegateError
     attr_reader :record
 
     def initialize(message = nil, record = nil)
@@ -14,8 +14,8 @@ module Castoff
     end
   end
 
-  # Raised by {Castoff::Model#unarchive!}
-  class RecordNotUnUnarchived < CastoffError
+  # Raised by {Relegate::Model#unarchive!}
+  class RecordNotUnarchived < RelegateError
     attr_reader :record
 
     def initialize(message = nil, record = nil)

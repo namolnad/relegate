@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Castoff
+module Relegate
   class Configuration # rubocop:disable Style/Documentation
     attr_accessor :column_name
     attr_writer :marked_scope_name, :unmarked_scope_name, :mark_method_name, :unmark_method_name

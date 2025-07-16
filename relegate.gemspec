@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "lib/castoff/version"
+require_relative "lib/relegate/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "castoff"
-  spec.version = Castoff::VERSION
+  spec.name = "relegate"
+  spec.version = Relegate::VERSION
   spec.summary = "A simple ActiveRecord archiving gem"
-  spec.homepage = "https://github.com/namolnad/castoff"
+  spec.homepage = "https://github.com/namolnad/relegate"
   spec.license = "MIT"
 
   spec.authors = ["Dan Loman"]

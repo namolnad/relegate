@@ -2,13 +2,13 @@
 
 require "active_support/concern"
 
-module Castoff
+module Relegate
   module Model # rubocop:disable Style/Documentation
     extend ActiveSupport::Concern
 
     class_methods do # rubocop:disable Metrics/BlockLength
       def castoff(column_name: nil) # rubocop:disable Metrics/MethodLength,Metrics/AbcSize
-        config = Castoff.configuration.dup.tap do |c|
+        config = Relegate.configuration.dup.tap do |c|
           c.column_name = column_name if column_name
         end
 
@@ -46,11 +46,11 @@ module Castoff
           private
 
           def _raise_record_not_#{config.marked_scope_name}
-            raise ::Castoff::RecordNotArchived.new(archived_fail_message, self)
+            raise ::Relegate::RecordNotArchived.new(archived_fail_message, self)
           end
 
           def _raise_record_not_#{config.unmarked_scope_name}
-            raise ::Castoff::RecordNotUnarchived.new(unarchived_fail_message, self)
+            raise ::Relegate::RecordNotUnarchived.new(unarchived_fail_message, self)
           end
 
           def #{config.marked_scope_name}_fail_message

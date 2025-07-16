@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    castoff (0.1.0)
+    relegate (0.1.0)
       activesupport (>= 7.1)
 
 GEM
@@ -83,9 +83,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 8.0.0)
-  castoff!
   minitest (~> 5.16)
   rake (~> 13.0)
+  relegate!
   rubocop (~> 1.21)
   sqlite3
   sqlite3-ffi

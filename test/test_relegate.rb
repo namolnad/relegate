@@ -2,7 +2,7 @@
 
 require "test_helper"
 
-class TestCastoff < Minitest::Test
+class TestRelegate < Minitest::Test
   def setup
     User.delete_all
   end

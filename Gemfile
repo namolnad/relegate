@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in castoff.gemspec
+# Specify your gem's dependencies in relegate.gemspec
 gemspec
 
 gem "activerecord", "~> 8.0.0"

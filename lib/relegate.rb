@@ -2,12 +2,12 @@
 
 require "active_support"
 
-require_relative "castoff/configuration"
-require_relative "castoff/errors"
-require_relative "castoff/model"
-require_relative "castoff/version"
+require_relative "relegate/configuration"
+require_relative "relegate/errors"
+require_relative "relegate/model"
+require_relative "relegate/version"
 
-module Castoff # rubocop:disable Style/Documentation
+module Relegate # rubocop:disable Style/Documentation
   def self.configure
     yield(configuration)
   end
@@ -17,6 +17,6 @@ module Castoff # rubocop:disable Style/Documentation
   end
 
   ActiveSupport.on_load(:active_record) do
-    include Castoff::Model
+    include Relegate::Model
   end
 end

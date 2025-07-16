@@ -1,15 +1,15 @@
-# Castoff
+# Relegate
 
 A simple ActiveRecord archiving gem, forked from [jhawthorn/discard](https://github.com/jhawthorn/discard/tree/master) with additional configuration options.
 
-Castoff provides methods and scopes to mark records as archived without deleting them. It integrates with ActiveRecord via an `archived_at` timestamp column (customizable).
+Relegate provides methods and scopes to mark records as archived without deleting them. It integrates with ActiveRecord via an `archived_at` timestamp column (customizable).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "castoff"
+gem "relegate"
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ bundle install
 Or install it yourself as:
 
 ```bash
-gem install castoff
+gem install relegate
 ```
 
 ## Usage
@@ -63,7 +63,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/namolnad/castoff. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/namolnad/castoff/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/namolnad/relegate. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/namolnad/relegate/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -71,4 +71,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Castoff project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/namolnad/castoff/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Relegate project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/namolnad/relegate/blob/main/CODE_OF_CONDUCT.md).
