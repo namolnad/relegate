@@ -26,11 +26,11 @@ gem install relegate
 
 ## Usage
 
-Add `castoff` to your model:
+Add `relegate` to your model:
 
 ```ruby
 class YourModel < ApplicationRecord
-  castoff
+  relegate
 end
 ```
 
@@ -45,7 +45,7 @@ You can override the column name:
 
 ```ruby
 class YourModel < ApplicationRecord
-  castoff column_name: :discarded_at
+  relegate column_name: :discarded_at
 end
 ```
 
